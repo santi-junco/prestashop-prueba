@@ -29,3 +29,8 @@ class ProductListView(generics.ListAPIView):
             products = products.filter(price=price)
 
         return products
+
+
+class ProductUpdateView(generics.UpdateAPIView):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
